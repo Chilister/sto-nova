@@ -3,7 +3,7 @@
 namespace App\Models\Customers;
 
 use App\Models\Cars\Brand;
-use App\Models\Cars\CarModel;
+use App\Models\Cars\BrandModel;
 use App\Models\Cars\DriveType;
 use App\Models\Cars\FuelType;
 use App\Models\Cars\GearboxType;
@@ -59,7 +59,7 @@ class Car extends Model
 
     public function model()
     {
-        return $this->belongsTo(CarModel::class, 'model_id');
+        return $this->belongsTo(BrandModel::class, 'model_id');
     }
 
     public function fuelType()

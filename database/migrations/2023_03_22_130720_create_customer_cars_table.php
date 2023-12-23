@@ -1,7 +1,7 @@
 <?php
 
 use App\Models\Cars\Brand;
-use App\Models\Cars\CarModel;
+use App\Models\Cars\BrandModel;
 use App\Models\Cars\DriveType;
 use App\Models\Cars\FuelType;
 use App\Models\Cars\GearboxType;
@@ -23,7 +23,7 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(Customer::class, 'customer_id');
             $table->foreignIdFor(Brand::class, 'brand_id');
-            $table->foreignIdFor(CarModel::class, 'model_id');
+            $table->foreignIdFor(BrandModel::class, 'model_id');
             $table->foreignIdFor(FuelType::class, 'fuel_type_id')->nullable();
             $table->foreignIdFor(DriveType::class, 'drive_type_id')->nullable();
             $table->foreignIdFor(GearboxType::class, 'gearbox_type_id')->nullable();
